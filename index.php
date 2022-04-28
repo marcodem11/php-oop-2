@@ -27,6 +27,7 @@ $prodotto3 = new prodotto(
   31.50
 );
 
+var_dump($prodotto1, $prodotto2, $prodotto3);
 // USER
 
 $user1 = new user(
@@ -36,10 +37,9 @@ $user1 = new user(
     'marcoverdi',
     'Piazza Fontana',
     '12345678901',
-    '2938492923845820',
-    '12/25',
-    933
   );
+  $user1->getSconto();
+$user1->addCrediCard(123812831283, '10/29', 333);
   
   var_dump($user1); 
 
@@ -49,10 +49,9 @@ $user1 = new user(
     'mick.morrow@gmail.com',
     'Via Giovanni 2',
     '3457869987',
-    '2938492923845820',
-    '12/25',
-    933
+    
   );
+  // $ospite1->addCrediCard(123456789, '05/23', 123);
   
   var_dump($ospite1); 
 
