@@ -57,7 +57,7 @@ $carrello1 = new carrello(
   
   $card1 = new creditCard(
     1234567890123456,
-    '12-22',
+    '',
     333
   );
   $card2 = new creditCard(
@@ -65,7 +65,7 @@ $carrello1 = new carrello(
     '05-25',
     123,
   );
-  
+  $card1->setScadenza('01-24');
 
 $user1 = new user(
     'Marco',
