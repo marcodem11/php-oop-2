@@ -28,3 +28,13 @@ $prodotto3 = new prodotto(
 
 var_dump($prodotto1, $prodotto2, $prodotto3);
 
+$user1 = new user(
+    'Marco',
+    'Verdi',
+    'marco.verdi@gmail.com',
+    'marcoverdi',
+    'Piazza Fontana',
+    '12345678901'
+  );
+  
+  var_dump($user1); 
