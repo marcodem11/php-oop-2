@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__. '/index.php';
-class carrello {
+class carrello{
   public $prodotti;
   public $totProdotti;
   public $totEuro;

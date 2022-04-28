@@ -28,7 +28,44 @@ $prodotto3 = new prodotto(
 );
 
 var_dump($prodotto1, $prodotto2, $prodotto3);
-// USER
+
+
+$carrello1 = new carrello(
+    [],
+    '',
+    ''
+  );
+  $carrello1->addProdotti($prodotto1);
+  $carrello1->addProdotti($prodotto2);
+  $carrello1->addProdotti($prodotto4);
+  $carrello1->addProdotti($prodotto4);
+  $carrello1->calcTot();
+  $carrello1->countTotProdotti();
+  
+  $carrello2 = new carrello(
+    [],
+    '',
+    ''
+  );
+  $carrello2->addProdotti($prodotto3);
+  $carrello2->addProdotti($prodotto2);
+  $carrello2->addProdotti($prodotto4);
+  $carrello2->calcTot();
+  $carrello2->countTotProdotti();
+  
+  // CREDITCARD
+  
+  $card1 = new creditCard(
+    1234567890123456,
+    '12-22',
+    333
+  );
+  $card2 = new creditCard(
+    9871231317653421,
+    '05-25',
+    123,
+  );
+  
 
 $user1 = new user(
     'Marco',
@@ -37,9 +74,10 @@ $user1 = new user(
     'marcoverdi',
     'Piazza Fontana',
     '12345678901',
+    $card1,
+    $carrello1,
   );
   $user1->getSconto();
-$user1->addCrediCard(123812831283, '10/29', 333);
   
   var_dump($user1); 
 
@@ -49,22 +87,11 @@ $user1->addCrediCard(123812831283, '10/29', 333);
     'mick.morrow@gmail.com',
     'Via Giovanni 2',
     '3457869987',
-    
+    $card2,
+    $carrello2,
   );
-  // $ospite1->addCrediCard(123456789, '05/23', 123);
+  // $ospite1->addCreditCard(123456789, date('m-y'), 123);
   
   var_dump($ospite1); 
 
-  $carrello1 = new carrello(
-    [],
-    0,
-    0
-  );
-  $carrello1->addProdotti($prodotto1);
-  $carrello1->addProdotti($prodotto2);
-  $carrello1->addProdotti($prodotto4);
-  $carrello1->addProdotti($prodotto4);
-  $carrello1->calcTot();
-  $carrello1->countTotProdotti();
   
-  var_dump($carrello1);

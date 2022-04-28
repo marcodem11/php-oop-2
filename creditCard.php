@@ -5,13 +5,28 @@ class creditCard{
   private $scadenza;
   private $cvv;
 
+  function __construct($_numero, $_scadenza, $_cvv){
+    if(strlen($_numero) == 16){
+      $this->numero = $_numero;
+    } else {
+      echo 'Numero carta errato';
+    }
+
+    if(strlen($_cvv) == 3){
+      $this->cvv = $_cvv;
+    } else {
+      echo 'Numero CVV errato';
+    }
+    $this->scadenza = $_scadenza;
+  }
+
   
 
   public function getNumero(){
     return $this->numero;
   }
 
-  public function getscadenza(){
+  public function getScadenza(){
     return $this->scadenza;
   }
 
@@ -19,9 +34,8 @@ class creditCard{
     return $this->cvv;
   }
 
-  public function addCrediCard($numero, $scadenza, $cvv){
+  public function addDataCard($numero, $scadenza, $cvv){
     $this->numero = $numero;
-    $this->scadenza =$scadenza;
     $this->cvv = $cvv;
   }
 } 
