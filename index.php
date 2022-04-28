@@ -3,6 +3,7 @@
 require_once __DIR__. '/prodotto.php';
 require_once __DIR__. '/ospite.php';
 require_once __DIR__. '/user.php';
+require_once __DIR__. '/carrello.php';
 
 $prodotto1 = new prodotto(
   'Medicinale',
@@ -48,3 +49,13 @@ $user1 = new user(
   );
   
   var_dump($ospite1); 
+
+  $carrello1 = new carrello(
+    [],
+    '',
+    ''
+  );
+  $carrello1->addProdotti($prodotto1);
+  $carrello1->addProdotti($prodotto2);
+  
+  var_dump($carrello1);
